@@ -7,6 +7,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SakuraCraftLauncher.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="SakuraCraftLauncher">
+        Title="SakuraCraftLauncher"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent">
         
+        <views:MainView />
 </Window>
