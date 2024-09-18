@@ -9,7 +9,8 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="SakuraCraftLauncher"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent">
-        
-        <views:MainView />
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
+
+  <views:MainView />
 </Window>
