@@ -25,9 +25,18 @@
 
     <Panel Margin="40">
       <Button Content="  - STRAT -  "
-         HorizontalAlignment="Center"
-         VerticalAlignment="Bottom"
-         Command="{Binding GameLaunch}"/>
+              HorizontalAlignment="Center"
+              VerticalAlignment="Bottom"
+              Command="{Binding GameLaunch}"/>
+    </Panel>
+
+    <Panel Margin="10">
+      <TextBox HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Width="300"
+               Watermark="Java Path"
+               AcceptsReturn="False"
+               Text="{Binding JavaPath,Mode=TwoWay}"/>
     </Panel>
   </Panel>
 </UserControl>
