@@ -14,37 +14,45 @@
 
   <Panel>
     
-    <ExperimentalAcrylicBorder IsHitTestVisible="False">
-      <ExperimentalAcrylicBorder.Material>
-        <ExperimentalAcrylicMaterial
-            BackgroundSource="Digger"
-            TintColor="Black"
-            TintOpacity="1"
-            MaterialOpacity="0.65" />
-      </ExperimentalAcrylicBorder.Material>
-    </ExperimentalAcrylicBorder>
     
-    <TabControl x:Name="Bootstrap" Margin="10">
-      <TabItem Header="Main">
-        <TextBlock Margin="5" Text="Page 1 - Main"/>
-      </TabItem>
-
-      <TabItem Header="Versions">
-        <TextBlock Margin="5" Text="Page 2 - Versions"/>
-        
-      </TabItem>
+    <Panel>
+      <TabControl x:Name="Bootstrap" 
+                  Margin="10">
       
-      <TabItem Header="DownLoad">
-        <TextBlock Margin="5" Text="Page 3 - DownLoad"/>
+        <TabItem Header="Main">
+          <StackPanel HorizontalAlignment="Right"
+                      VerticalAlignment="Bottom">
+            <Button x:Name="Launch"
+                    Content="START"
+                    Width="190"
+                    Height="50"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Command="{Binding GameLaunch}"/>
+          </StackPanel>
+          
+        </TabItem>
+
+        <TabItem Header="Versions">
+          <TextBlock Margin="5" 
+                     Text="Page 2 - Versions"/>
         
-      </TabItem>
-
-      <TabItem Header="Setting">
-        <TextBlock Margin="5" Text="Page 4 - Setting"/>
-
-      </TabItem>
+        </TabItem>
       
-    </TabControl>
+        <TabItem Header="DownLoad">
+          <TextBlock Margin="5" 
+                     Text="Page 3 - DownLoad"/>
+        
+        </TabItem>
+
+        <TabItem Header="Setting">
+          <TextBlock Margin="5" 
+                     Text="Page 4 - Setting"/>
+
+        </TabItem>
+      
+      </TabControl>
+    </Panel>
 
     
     
