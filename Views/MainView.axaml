@@ -13,6 +13,7 @@
   </Design.DataContext>
 
   <Panel>
+    
     <ExperimentalAcrylicBorder IsHitTestVisible="False">
       <ExperimentalAcrylicBorder.Material>
         <ExperimentalAcrylicMaterial
@@ -22,21 +23,30 @@
             MaterialOpacity="0.65" />
       </ExperimentalAcrylicBorder.Material>
     </ExperimentalAcrylicBorder>
+    
+    <TabControl x:Name="Bootstrap" Margin="10">
+      <TabItem Header="Main">
+        <TextBlock Margin="5" Text="Page 1 - Main"/>
+      </TabItem>
 
-    <Panel Margin="40">
-      <Button Content="  - STRAT -  "
-              HorizontalAlignment="Center"
-              VerticalAlignment="Bottom"
-              Command="{Binding GameLaunch}"/>
-    </Panel>
+      <TabItem Header="Versions">
+        <TextBlock Margin="5" Text="Page 2 - Versions"/>
+        
+      </TabItem>
+      
+      <TabItem Header="DownLoad">
+        <TextBlock Margin="5" Text="Page 3 - DownLoad"/>
+        
+      </TabItem>
 
-    <Panel Margin="10">
-      <TextBox HorizontalAlignment="Center"
-               VerticalAlignment="Top"
-               Width="300"
-               Watermark="Java Path"
-               AcceptsReturn="False"
-               Text="{Binding JavaPath,Mode=TwoWay}"/>
-    </Panel>
+      <TabItem Header="Setting">
+        <TextBlock Margin="5" Text="Page 4 - Setting"/>
+
+      </TabItem>
+      
+    </TabControl>
+
+    
+    
   </Panel>
 </UserControl>
