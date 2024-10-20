@@ -37,9 +37,11 @@
               <TextBlock Text="Page 1 - Main"/>
               <!-- 游戏版本列表 -->
               <ComboBox x:Name="GameVersionsList"
+                        
                         Width="200"/>
               <!-- Java版本列表 -->
               <ComboBox x:Name="JavaVersionsList"
+                        ItemsSource="{Binding JavaVersionsList}"
                         Width="200"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right"

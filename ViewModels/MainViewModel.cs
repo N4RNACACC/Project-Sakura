@@ -1,14 +1,14 @@
-﻿using ReactiveUI;
-using System;
-using System.Windows.Input;
-using System.Threading.Tasks;
-using MinecraftLaunch.Components.Authenticator;
-using MinecraftLaunch.Components.Resolver;
-using MinecraftLaunch.Classes.Interfaces;
+﻿using MinecraftLaunch.Classes.Interfaces;
 using MinecraftLaunch.Classes.Models.Launch;
+using MinecraftLaunch.Components.Authenticator;
 using MinecraftLaunch.Components.Launcher;
+using MinecraftLaunch.Components.Resolver;
 using MsBox.Avalonia;
 using MsBox.Avalonia.Enums;
+using ReactiveUI;
+using System;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
 
 namespace SakuraCraftLauncher.ViewModels;
@@ -18,21 +18,19 @@ public class MainViewModel : ViewModelBase
     public ICommand GameLaunch { get; }
     public static string? UserName { get; private set; }
 
-
-
     public MainViewModel()
     {
         GameLaunch = ReactiveCommand.Create(static async () =>
         {
+            IGameResolver GameResolver = new GameResolver(".minecraft");
             // 登录的账户信息
-            var loginaccount = new OfflineAuthenticator(UserName).Authenticate();
-            IGameResolver resolver = new GameResolver(".minecraft");
+            var LoginAccount = new OfflineAuthenticator(UserName).Authenticate();
             try
             {
                 var config = new LaunchConfig
                 {
                     // 设置启动的账户
-                    Account = loginaccount,
+                    Account = LoginAccount,
                     // 配置代码是否可独立运行
                     IsEnableIndependencyCore = true,
                     // Java配置
@@ -43,7 +41,7 @@ public class MainViewModel : ViewModelBase
                     },
                 };
                 // 启动核心所需的信息
-                Launcher launcher = new(resolver, config);
+                Launcher launcher = new(GameResolver, config);
                 // 异步启动游戏，防止启动器卡死
                 await Task.Run(async () =>
                 {
@@ -52,10 +50,10 @@ public class MainViewModel : ViewModelBase
                     // 2024-9-19 请确保与启动器同目录的.minecraft文件夹存在版本“1.12.2”，否则当启动器START按钮按下后程序会因为此段代码崩溃，待后续完善
                 });
             }
-            catch(Exception ) 
+            catch (Exception)
             {
                 var box = MessageBoxManager
-                .GetMessageBoxStandard("", "", ButtonEnum.YesNo);
+                .GetMessageBoxStandard("ERROR", "Can't Launch Game !", ButtonEnum.Ok);
                 var result = await box.ShowWindowAsync();
             }
         });
