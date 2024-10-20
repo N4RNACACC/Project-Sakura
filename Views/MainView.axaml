@@ -26,8 +26,7 @@
     </Panel>
 
     <Panel>
-      <TabControl x:Name="Bootstrap" 
-                  Margin="10">
+      <TabControl Margin="10">
                   
       <!-- 主页 -->
         <TabItem Header="Main">
@@ -36,11 +35,23 @@
                         VerticalAlignment="Top"
                         Margin="10">
               <TextBlock Text="Page 1 - Main"/>
+              <!-- 游戏版本列表 -->
+              <ComboBox x:Name="GameVersionsList"
+                        Width="200"/>
+              <!-- Java版本列表 -->
+              <ComboBox x:Name="JavaVersionsList"
+                        Width="200"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom">
-              <Button x:Name="Launch"
-                      Content="START"
+                        VerticalAlignment="Bottom"
+                        Margin="10">
+              <!-- 玩家用户名-离线登录 -->
+              <TextBlock Text="Login Name:"/>
+              <TextBox VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       Text="{Binding UserName}"/>
+              <!-- 启动按钮 -->
+              <Button Content="START"
                       Width="190"
                       Height="50"
                       HorizontalContentAlignment="Center"
