@@ -14,13 +14,15 @@
         Width="1220"
         Height="720">
 
+    
     <Border Background="#FFFFE0E5"
             BorderBrush="#EBEDF3"
             Padding="30"
             CornerRadius="25"
             MouseDown="Border_MouseDown">
 
-        <Border CornerRadius="40">
+        
+            <Border CornerRadius="40">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0 0"
                                      EndPoint="0 1">
@@ -39,34 +41,34 @@
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <Border CornerRadius="40 0 0 40"
+                
+                <!-- 导航 -->
+                <Border Grid.Column="0"
+                        CornerRadius="40 0 0 40"
                         Background="#FFB6B6FD">
                     <Grid>
                         <StackPanel VerticalAlignment="Top"
-                                    Margin="10,40,10,0"
-                                    Height="310">
-                            <!-- 主页 -->
-                            <Button Style="{StaticResource MenuButton}">
-                                <Icon:PackIconMaterial Kind="HomeVariant"
-                                                       Style="{StaticResource MenuButtonIcon}"/>
-                            </Button>
-
-                            <!-- 下载 -->
-                            <Button Style="{StaticResource MenuButton}">
-                                <Icon:PackIconMaterial Kind="TrayArrowDown"
-                                                       Style="{StaticResource MenuButtonIcon}"/>
-                            </Button>
-
-                            <!-- 设置 -->
-                            <Button Style="{StaticResource MenuButton}">
-                                <Icon:PackIconMaterial Kind="CogOutline"
-                                                       Style="{StaticResource MenuButtonIcon}"/>
-                            </Button>
+                                    Margin="10,40,10,0">
+                            <RadioButton x:Name="RadioButton_HomePage"
+                                         IsChecked="True"
+                                         Content="Home"
+                                         GroupName="Pages"
+                                         Checked="PageRadioButton_Checked">
+                            </RadioButton>
+                            <RadioButton x:Name="RadioButton_DownLoadPage"
+                                         Content="Download"
+                                         GroupName="Pages"
+                                         Checked="PageRadioButton_Checked">
+                            </RadioButton>
+                            <RadioButton x:Name="RadioButton_SettingsPage"
+                                         Content="Settings"
+                                         GroupName="Pages"
+                                         Checked="PageRadioButton_Checked">
+                            </RadioButton>
                         </StackPanel>
 
+
                         <StackPanel VerticalAlignment="Top"
-                                    Height="140"
                                     Margin="0,510,0,0">
                             <!-- 分隔线 -->
                             <Separator Background="#877CC5"
@@ -92,6 +94,11 @@
                     </Grid>
 
                 </Border>
+
+                <Border Grid.Column="1">
+                    <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden"/>
+                </Border>
+
             </Grid>
         </Border>
 

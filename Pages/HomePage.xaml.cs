@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SakuraCraftLauncher.Pages
 {
     /// <summary>
-    /// DownloadPage.xaml 的交互逻辑
+    /// HomePage.xaml 的交互逻辑
     /// </summary>
-    public partial class DownloadPage : Page
+    public partial class HomePage : Page
     {
-        public DownloadPage()
+        public HomePage()
         {
             InitializeComponent();
         }
