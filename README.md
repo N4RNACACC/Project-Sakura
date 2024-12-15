@@ -4,9 +4,9 @@ This is a Minecraft Launcher<br>
 <br>
 
 ## 引用
-- [StarLight.Core](https://github.com/Ink-Marks-Studio/StarLight.Core) - 启动核心
-- [MahApps.Metro](https://github.com/MahApps/MahApps.Metro) - 界面库
-- [HandyControl](https://github.com/HandyOrg/HandyControl) - 控件库
+- StarLight.Core - 启动核心 [[GitHub](https://github.com/Ink-Marks-Studio/StarLight.Core/)]
+- HandyControl - 控件库 [[Github](https://github.com/HandyOrg/HandyControl/)]
+- Font Awesome - 图标库 [[GitHub](https://github.com/FortAwesome/Font-Awesome/)][[官网](https://fontawesome.com/)]
 
 ## License
 CN : 此项目基于 Apache 2.0 License 许可证发布。详见 [LICENSE.txt](LICENSE.txt) 文件。

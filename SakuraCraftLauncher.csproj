@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
     <Folder Include="Styles\" />
   </ItemGroup>
 
