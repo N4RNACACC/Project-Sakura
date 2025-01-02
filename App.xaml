@@ -4,6 +4,10 @@
              StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-        <ResourceDictionary Source="Styles/MenuButtonStyle.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/IndexButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

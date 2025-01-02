@@ -9,6 +9,6 @@
       Title="SettingsPage">
 
     <Grid>
-        <TextBlock Text="This is SettingsPage" FontSize="30"/>
+        
     </Grid>
 </Page>

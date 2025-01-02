@@ -2,12 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Style x:Key="MenuButton" TargetType="Button">
+    <Style x:Key="IndexButton" TargetType="Button">
+        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Resources/Fonts/#Font Awesome 6 Free Solid"/>
+        <Setter Property="FontSize" Value="20"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
         <Setter Property="Margin" Value="0 5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -28,6 +30,7 @@
             </Trigger>
         </Style.Triggers>
 
+        
     </Style>
-    
+
 </ResourceDictionary>

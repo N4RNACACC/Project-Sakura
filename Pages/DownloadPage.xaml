@@ -9,6 +9,6 @@
       Title="DownloadPage">
 
     <Grid>
-        <TextBlock Text="This is DownloadPage" FontSize="30"/>
+        
     </Grid>
 </Page>

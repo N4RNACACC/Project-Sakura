@@ -9,13 +9,12 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        ResizeMode="NoResize"
         Name="Window"
-        Width="1220"
-        Height="720">
+        Width="850"
+        Height="550">
 
-    
-    <Border Background="#FFFFE0E5"
+
+    <Border Background="#FFDEE9FF"
             BorderBrush="#EBEDF3"
             Padding="30"
             CornerRadius="25"
@@ -38,13 +37,13 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="60"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
                 <!-- 导航 -->
                 <Border Grid.Column="0"
-                        CornerRadius="40 0 0 40"
+                        CornerRadius="20 0 0 20"
                         Background="#FFB6B6FD">
                     <Grid>
                         <StackPanel VerticalAlignment="Top"
@@ -55,10 +54,9 @@
                                          GroupName="Pages"
                                          Checked="PageRadioButton_Checked">
                             </RadioButton>
-                            <RadioButton x:Name="RadioButton_DownLoadPage"
-                                         Content="Download"
-                                         GroupName="Pages"
-                                         Checked="PageRadioButton_Checked">
+                            <RadioButton x:Name="RadioButton_Accounts"
+                                         Content="Accounts"
+                                         GroupName="Pages">
                             </RadioButton>
                             <RadioButton x:Name="RadioButton_SettingsPage"
                                          Content="Settings"
@@ -68,27 +66,23 @@
                         </StackPanel>
 
 
-                        <StackPanel VerticalAlignment="Top"
-                                    Margin="0,510,0,0">
+                        <StackPanel VerticalAlignment="Bottom">
                             <!-- 分隔线 -->
                             <Separator Background="#877CC5"
                                        Margin="20 0 20 0"
                                        Height="10"/>
-                            
+
                             <!-- 最小化 -->
-                            <Button Click="Window_MinimizeButton_Click" Style="{StaticResource MenuButton}">
-                                <Icon:PackIconMaterial Kind="Minus"
-                                                       Style="{StaticResource MenuButtonIcon}"
-                                                       Height="25"
-                                                       Width="25"/>
+                            <Button Click="Window_MinimizeButton_Click"
+                                    Content="&#xf068;"
+                                    Style="{DynamicResource IndexButton}">
                             </Button>
-                            
+
                             <!-- 程序退出 -->
-                            <Button Click="CloseButton_Click" Style="{StaticResource MenuButton}">
-                                <Icon:PackIconMaterial Kind="Close"
-                                                       Style="{StaticResource MenuButtonIcon}"
-                                                       Height="25"
-                                                       Width="25"/>
+                            <Button Click="CloseButton_Click"
+                                    
+                                    Content="&#xf00d;"
+                                    Style="{DynamicResource IndexButton}">
                             </Button>
                         </StackPanel>
                     </Grid>

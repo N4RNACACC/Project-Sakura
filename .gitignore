@@ -351,7 +351,7 @@ ASALocalRun/
 .mfractor/
 
 # Local History for Visual Studio
-.localhistory/
+.localhistory
 
 # BeatPulse healthcheck temp database
 healthchecksdb
@@ -364,3 +364,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+Resources\Fonts\*
